@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { easeInOut } from "framer-motion";
 
 const MorseToB = ({ isMorseAll, color }) => {
-  const [isMorse, setIsMorse] = useState(isMorseAll);
+  const [isMorse, setIsMorse] = useState(false);
 
   useEffect(() => {
     if (isMorseAll !== null) {

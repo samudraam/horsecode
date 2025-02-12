@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const MorseToG = ({ isMorseAll, color }) => {
-  const [isMorse, setIsMorse] = useState(isMorseAll);
+  const [isMorse, setIsMorse] = useState(false);
 
   useEffect(() => {
     if (isMorseAll !== null) {
