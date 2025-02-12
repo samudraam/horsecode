@@ -1,17 +1,27 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { easeInOut } from "framer-motion";
 
-const MorseToC = () => {
-  const [isMorse, setIsMorse] = useState(true);
+const MorseToC = ({ isMorseAll,color }) => {
+  const [isMorse, setIsMorse] = useState(isMorseAll);
+  useEffect(() => {
+    if (isMorseAll !== null) {
+      setIsMorse(isMorseAll);
+    }
+  }, [isMorseAll]);
 
   return (
     <svg
-      viewBox="0 0 1200 1200"
-      width="400"
-      height="300"
+      viewBox="0 0 3300 900"
+      width="100%"
+      preserveAspectRatio="xMidYMid meet"
+      style={{
+        maxWidth: "300px",
+        height: "auto",
+        cursor: "pointer",
+        overflow: "visible",
+      }}
       onClick={() => setIsMorse(!isMorse)}
-      style={{ cursor: "pointer", overflow: "visible" }}
     >
       <motion.g
         animate={isMorse ? "morse" : "letter"}
@@ -22,7 +32,7 @@ const MorseToC = () => {
           cx={isMorse ? 1029 : 125}
           cy={isMorse ? 125 : 275}
           r={isMorse ? 125 : 125}
-          fill="black"
+          fill={color}
           variants={{
             morse: { scale: 1 },
             letter: { cx: 125, cy: 275, borderRadius: "50%" },
@@ -42,7 +52,7 @@ const MorseToC = () => {
           width={832}
           height={122}
           initial={{ x: 10, y: 40, rotate: 0 }}
-          fill="black"
+          fill={color}
           animate={{
             x: isMorse ? 10 : -1200,
             y: isMorse ? 40 : 700,
@@ -59,7 +69,7 @@ const MorseToC = () => {
           cx={isMorse ? 2200 : 125}
           cy={isMorse ? 125 : 556}
           r={isMorse ? 125 : 125}
-          fill="black"
+          fill={color}
           variants={{
             morse: { scale: 1 },
             letter: { cx: 125, cy: 556, r: 125 },
@@ -81,7 +91,7 @@ const MorseToC = () => {
         width={832}
         height={122}
         initial={{ x: 10, y: 40, rotate: 0 }}
-        fill="black"
+        fill={color}
         animate={{
           x: isMorse ? 10 : 0,
           y: isMorse ? 40 : -50,
@@ -96,7 +106,7 @@ const MorseToC = () => {
       {/* First horizontal line  */}
       <motion.path
         d="M125 110 V740"
-        stroke="black"
+        stroke={color}
         strokeWidth="8"
         fill="none"
         initial={{ scaleY: 0 }}
@@ -106,7 +116,7 @@ const MorseToC = () => {
           transition: {
             duration: 1,
             ease: "circOut",
-            delay: isMorse ? 0 : 0.8,
+            delay: isMorse ? 0 : 0.6,
           },
         }}
       />

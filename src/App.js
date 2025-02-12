@@ -1,21 +1,22 @@
+import { useState } from "react";
 import "./styles.css";
-import MorseToA from "./MorseToA";
-import MorseToB from "./MorseToB";
-import MorseToC from "./MorseToC";
+import Specimen from "./Specimen";
+import ToggleSwitch from "./Toggle";
 export default function App() {
+  const [isMorseAll, setIsMorseAll] = useState(null);
+
+  const toggleAll = () => {
+    setIsMorseAll((prev) => (prev === null ? true : !prev));
+  };
+
   return (
     <div className="App">
-      <div className="flex-container">
-        <div className="flex-item">
-          <MorseToA />
+      <div className="header-container">
+        <h1>telegraphy</h1>
+        <ToggleSwitch isMorseAll={isMorseAll} toggleAll={toggleAll} />
         </div>
-        <div className="flex-item">
-          <MorseToB />
-        </div>
-        <div className="flex-item">
-          <MorseToC />
-        </div>
-      </div>
+
+        <Specimen isMorseAll={isMorseAll} />
     </div>
   );
 }

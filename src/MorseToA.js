@@ -1,16 +1,28 @@
 import { easeInOut } from "framer-motion";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const MorseToA = () => {
-  const [isMorse, setIsMorse] = useState(true);
+const MorseToA = ({ isMorseAll, color }) => {
+  const [isMorse, setIsMorse] = useState(isMorseAll);
+
+  useEffect(() => {
+    if (isMorseAll !== null) {
+      setIsMorse(isMorseAll);
+    }
+  }, [isMorseAll]);
+
   return (
     <svg
-      viewBox="0 0 1200 1200"
-      width="400"
-      height="300"
+      viewBox="0 0 3300 900"
+      width="100%"
+      preserveAspectRatio="xMidYMid meet"
+      style={{
+        maxWidth: "300px",
+        height: "auto",
+        cursor: "pointer",
+        overflow: "visible",
+      }}
       onClick={() => setIsMorse(!isMorse)}
-      style={{ cursor: "pointer", overflow: "visible" }}
     >
       <motion.g
         animate={isMorse ? "morse" : "letter"}
@@ -20,13 +32,13 @@ const MorseToA = () => {
           cx={125}
           cy={125}
           r={125}
-          fill="black"
+          fill={color}
           variants={{
-            morse: { scale: 1 },
+            morse: { cx: 125, cy: 125, r: 125 },
             letter: {
               cx: 419,
               cy: 118.8,
-              borderRadius: "50%",
+              r: 125,
             },
           }}
           initial="morse"
@@ -43,7 +55,7 @@ const MorseToA = () => {
         initial={{ x: 300, y: 70 }}
         width={832}
         height={122}
-        fill="black"
+        fill={color}
         animate={{
           y: isMorse ? 70 : 445,
           x: isMorse ? 300 : 5,
@@ -58,7 +70,7 @@ const MorseToA = () => {
 
       <motion.path
         d="M313.5 146L4 450V833"
-        stroke="black"
+        stroke={color}
         strokeWidth="8"
         fill="none"
         initial={{ pathLength: 0 }}
@@ -74,7 +86,7 @@ const MorseToA = () => {
 
       <motion.path
         d="M526.5 146L834 450.5V833"
-        stroke="black"
+        stroke={color}
         strokeWidth="8"
         fill="none"
         initial={{ pathLength: 0 }}
@@ -93,7 +105,7 @@ const MorseToA = () => {
         y1="450"
         x2="4"
         y2="833"
-        stroke="black"
+        stroke={color}
         strokeWidth="8"
         initial={{ scaleY: 0 }}
         animate={{
@@ -112,7 +124,7 @@ const MorseToA = () => {
         y1="450"
         x2="834"
         y2="833"
-        stroke="black"
+        stroke={color}
         strokeWidth="8"
         initial={{ scaleY: 0 }}
         animate={{
