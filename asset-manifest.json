@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/horsecode/static/css/main.a318d52a.css",
-    "main.js": "/horsecode/static/js/main.d3161745.js",
+    "main.js": "/horsecode/static/js/main.ee22de23.js",
     "static/media/Dashness-g0W6.ttf": "/horsecode/static/media/Dashness-g0W6.aa4e61af86335ffb03eb.ttf",
     "index.html": "/horsecode/index.html",
     "main.a318d52a.css.map": "/horsecode/static/css/main.a318d52a.css.map",
-    "main.d3161745.js.map": "/horsecode/static/js/main.d3161745.js.map"
+    "main.ee22de23.js.map": "/horsecode/static/js/main.ee22de23.js.map"
   },
   "entrypoints": [
     "static/css/main.a318d52a.css",
-    "static/js/main.d3161745.js"
+    "static/js/main.ee22de23.js"
   ]
 }
