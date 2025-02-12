@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "keywords": [],
-  "homepage": "https://samudraam.github.io/horsecode/",
+  "homepage": "https://samudraam.github.io/horsecode",
   "main": "src/index.tsx",
   "dependencies": {
     "framer-motion": "12.0.6",

@@ -8,6 +8,7 @@ export default function App() {
   const toggleAll = () => {
     setIsMorseAll((prev) => (prev === null ? true : !prev));
   };
+  console.log("Letter Components:", letterComponents);
 
   return (
     <div className="App">
@@ -15,7 +16,6 @@ export default function App() {
         <h1>telegraphy</h1>
         <ToggleSwitch isMorseAll={isMorseAll} toggleAll={toggleAll} />
       </div>
-
       <Specimen isMorseAll={isMorseAll} />
     </div>
   );

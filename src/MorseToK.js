@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const MorseToK = ({ isMorseAll, color }) => {
-  const [isMorse, setIsMorse] = useState(isMorseAll);
+  const [isMorse, setIsMorse] = useState(false);
 
   useEffect(() => {
     if (isMorseAll !== null) {
@@ -95,7 +95,7 @@ const MorseToK = ({ isMorseAll, color }) => {
           transition={{
             duration: 1,
             ease: "easeInOut",
-            delay: isMorse ? 0 : 0.8, 
+            delay: isMorse ? 0 : 0.8,
           }}
         />
       </motion.g>
