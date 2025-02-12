@@ -33,6 +33,8 @@ const letterComponents = [
 console.log("Letter Components:", letterComponents);
 
 const Specimen = ({ isMorseAll }) => {
+  console.log("isMorseAll in Specimen:", isMorseAll); // Add logging here
+
   return (
     <div className="grid-container">
       {letterComponents.map((LetterComponent, idx) => (

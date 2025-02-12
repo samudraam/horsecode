@@ -2,12 +2,15 @@ import { useState } from "react";
 import "./styles.css";
 import Specimen from "./Specimen";
 import ToggleSwitch from "./Toggle";
+
 export default function App() {
   const [isMorseAll, setIsMorseAll] = useState(false);
 
   const toggleAll = () => {
-    setIsMorseAll((prev) => (prev === null ? true : !prev));
+    setIsMorseAll((prev) => !prev);
   };
+
+  console.log("isMorseAll:", isMorseAll); // Add logging here
 
   return (
     <div className="App">
