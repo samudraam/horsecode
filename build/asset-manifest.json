@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ea1c6228.css",
+    "main.js": "/static/js/main.29d03403.js",
+    "static/media/Dashness-g0W6.ttf": "/static/media/Dashness-g0W6.aa4e61af86335ffb03eb.ttf",
+    "index.html": "/index.html",
+    "main.ea1c6228.css.map": "/static/css/main.ea1c6228.css.map",
+    "main.29d03403.js.map": "/static/js/main.29d03403.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ea1c6228.css",
+    "static/js/main.29d03403.js"
+  ]
+}
