@@ -30,6 +30,7 @@ const letterComponents = [
   MorseToM,
   MorseToN,
 ];
+console.log("Letter Components:", letterComponents);
 
 const Specimen = ({ isMorseAll }) => {
   return (

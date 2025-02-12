@@ -8,7 +8,6 @@ export default function App() {
   const toggleAll = () => {
     setIsMorseAll((prev) => (prev === null ? true : !prev));
   };
-  console.log("Letter Components:", letterComponents);
 
   return (
     <div className="App">
