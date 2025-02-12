@@ -3,7 +3,7 @@ import "./styles.css";
 import Specimen from "./Specimen";
 import ToggleSwitch from "./Toggle";
 export default function App() {
-  const [isMorseAll, setIsMorseAll] = useState(null);
+  const [isMorseAll, setIsMorseAll] = useState(false);
 
   const toggleAll = () => {
     setIsMorseAll((prev) => (prev === null ? true : !prev));
@@ -14,9 +14,9 @@ export default function App() {
       <div className="header-container">
         <h1>telegraphy</h1>
         <ToggleSwitch isMorseAll={isMorseAll} toggleAll={toggleAll} />
-        </div>
+      </div>
 
-        <Specimen isMorseAll={isMorseAll} />
+      <Specimen isMorseAll={isMorseAll} />
     </div>
   );
 }
