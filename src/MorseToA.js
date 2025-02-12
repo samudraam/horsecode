@@ -52,7 +52,7 @@ const MorseToA = ({ isMorseAll, color }) => {
       </motion.g>
 
       <motion.rect
-        initial={{ x: 300, y: 70 }}
+        initial={{ x: 300, y: 70, height: 122 }}
         width={832}
         height={122}
         fill={color}
